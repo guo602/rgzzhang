@@ -276,7 +276,7 @@ private struct ManualEntrySheetView: View {
                                     .keyboardType(.decimalPad)
                                     .padding(.horizontal, 12)
                                     .padding(.vertical, 10)
-                                    .background(.white)
+                                    .background(Color(.secondarySystemBackground))
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
                             }
@@ -288,7 +288,7 @@ private struct ManualEntrySheetView: View {
                                 TextField("例如 午餐", text: $titleText)
                                     .padding(.horizontal, 12)
                                     .padding(.vertical, 10)
-                                    .background(.white)
+                                    .background(Color(.secondarySystemBackground))
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
                             }
@@ -314,7 +314,7 @@ private struct ManualEntrySheetView: View {
                                 }
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 10)
-                                .background(.white)
+                                .background(Color(.secondarySystemBackground))
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
                             }
@@ -342,7 +342,7 @@ private struct ManualEntrySheetView: View {
                                     }
                                     .padding(.horizontal, 12)
                                     .padding(.vertical, 10)
-                                    .background(.white)
+                                    .background(Color(.secondarySystemBackground))
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -387,7 +387,7 @@ private struct ManualEntrySheetView: View {
                                     .buttonStyle(.plain)
                                     .padding(.horizontal, 12)
                                     .padding(.vertical, 10)
-                                    .background(.white)
+                                    .background(Color(.secondarySystemBackground))
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -587,7 +587,7 @@ private struct HistoryPageView: View {
                     }
                     .padding(.horizontal, 12)
                     .padding(.vertical, 10)
-                    .background(.white)
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(.systemGray4)))
                     .transition(.opacity.combined(with: .move(edge: .top)))
@@ -651,7 +651,7 @@ private struct HistoryPageView: View {
             .padding(.horizontal, 16)
             .padding(.top, 4)
             .padding(.bottom, 12)
-            .background(.white)
+            .background(Color(.secondarySystemBackground))
 
             if !searchOpen {
                 if monthGroups.isEmpty {
@@ -918,7 +918,7 @@ private struct StatsPageView: View {
                         periodButton(title: "年", active: period == .year)
                     }
                     .padding(8)
-                    .background(.white)
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -994,7 +994,7 @@ private struct StatsPageView: View {
                         }
                     }
                     .padding(16)
-                    .background(.white)
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -1032,7 +1032,7 @@ private struct StatsPageView: View {
                         }
                     }
                     .padding(16)
-                    .background(.white)
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -1354,7 +1354,7 @@ private struct SettingsPageView: View {
                         }
                     }
                     .padding(16)
-                    .background(.white)
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .overlay(
                         RoundedRectangle(cornerRadius: 16).stroke(Color(.systemGray4), lineWidth: 1)
@@ -1390,7 +1390,7 @@ private struct SettingsPageView: View {
                         }
                     }
                     .padding(16)
-                    .background(.white)
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .overlay(
                         RoundedRectangle(cornerRadius: 16).stroke(Color(.systemGray4), lineWidth: 1)
@@ -1431,19 +1431,20 @@ private struct SettingsPageView: View {
                                     Text("清理所有数据")
                                         .font(.subheadline.weight(.medium))
                                 }
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 10)
                                 .foregroundStyle(rose600)
+                                .background(rose50)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12).stroke(rose200, lineWidth: 1)
+                                )
+                                .contentShape(Rectangle())
                             }
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 10)
-                            .background(rose50)
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12).stroke(rose200, lineWidth: 1)
-                            )
                         }
                     }
                     .padding(16)
-                    .background(.white)
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .overlay(
                         RoundedRectangle(cornerRadius: 16).stroke(Color(.systemGray4), lineWidth: 1)
@@ -1569,7 +1570,7 @@ private struct SettingsPageView: View {
             }
         }
         .padding(12)
-        .background(.white)
+        .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(.systemGray4), lineWidth: 1))
     }
@@ -1756,7 +1757,7 @@ private struct CategoryEditorSheet: View {
                         TextField("例如 餐饮", text: $name)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 10)
-                            .background(.white)
+                            .background(Color(.secondarySystemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
                     }
@@ -1795,7 +1796,7 @@ private struct CategoryEditorSheet: View {
                             .font(.subheadline)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 10)
-                            .background(.white)
+                            .background(Color(.secondarySystemBackground))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
                     }
@@ -1904,7 +1905,7 @@ private struct ActionCard: View {
             if inverted {
                 brandPurpleGradient
             } else {
-                Color.white
+                Color(.secondarySystemBackground)
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 16))
@@ -1944,7 +1945,7 @@ private struct WhiteSection<Content: View>: View {
             content
         }
         .padding(14)
-        .background(.white)
+        .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color(.systemGray5)))
     }
@@ -1973,7 +1974,7 @@ private struct RecordRow: View {
             Text(amount).font(.subheadline.weight(.semibold))
         }
         .padding(12)
-        .background(.white)
+        .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(.systemGray5)))
     }
@@ -2000,7 +2001,7 @@ private struct HistoryRow: View {
             Text(amount).font(.subheadline.weight(.semibold))
         }
         .padding(10)
-        .background(.white)
+        .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(.systemGray5)))
     }
